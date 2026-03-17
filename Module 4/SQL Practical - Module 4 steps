@@ -1,0 +1,25 @@
+Final Relationship Structure
+
+1️⃣ Create Database
+2️⃣ Create Students Table (Add NOT NULL + CHECK), (Try insert below 18)
+3️⃣ Insert Valid Students
+4️⃣ Create Courses Table (Add NOT NULL) & Insert courses
+5️⃣ Create Enrollments Table (On update cascade, delete, restrict)
+6️⃣ Insert Enrollment Data & show data
+7️⃣ Demonstrate CASCADE
+8️⃣ Demonstrate RESTRICT
+9️⃣ Demonstrate SET NULL (Add New Table)
+- Create instructor table
+- Add instructor column to courses
+- Add foreign key
+- Insert instructor
+- update course
+- now delete instructor
+- check courses table. instructor column becomes null
+🔟 Demonstrate ON UPDATE CASCADE
+- change student ID
+
+
+
+
+
