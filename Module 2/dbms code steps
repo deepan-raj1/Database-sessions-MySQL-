@@ -1,0 +1,15 @@
+Step 1 - Create database
+Step 2 - Create tables
+Step 3 -- Insert sample data
+
+Step 4 -- Join 4 tables - to see full order details
+-- we want orderid, customer name, product name, price, quantity, total price
+
+Step 5 –  Filter Orders for Specific Customer
+Step 6 -- Update Example (Update arjun phone no.)
+Step 7 -- Delete Test (Check Foreign Key) (Should fail because orders exist.)
+Step 8 --  Add New Column (Schema Change) in orders table
+Step 9 --  Add order_price and update order items (Advanced Practice)
+Step 10 --  Drop Tables (Reset Practice)
+
+
