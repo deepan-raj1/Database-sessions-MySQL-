@@ -1,0 +1,67 @@
+-------------------------------------------------
+
+-- STEP 1: Setup Database
+-- How do we create and switch to a database to start working?
+
+--STEP 2: Create Table
+-- How do we design a table to store employee details?
+
+-- STEP 3: Insert Data
+-- How do we add multiple employee records into the table?
+('Arun', 'HR', 30000, '9876543210', '2022-01-10'),
+('Divya', 'IT', 50000, NULL, '2021-03-15'),
+('Kiran', 'IT', 60000, '9123456780', '2020-07-20'),
+('Meena', 'HR', 35000, NULL, '2023-02-01'),
+('Ravi', 'Sales', 40000, '9988776655', '2022-05-25'),
+('Suresh', 'Sales', 45000, NULL, '2021-11-11');
+
+-- STEP 4: Basic SELECT
+-- How can we view all the data stored in the employees table?
+
+-- STEP 5: Aggregate Functions
+-- COUNT(*) - How many total employees are there?
+-- COUNT(phone) - How many employees have phone numbers (non-NULL)?
+-- SUM(salary) - What is the total salary paid to all employees?
+-- AVG(salary) - What is the average salary of employees?
+-- MIN(salary) - What is the lowest salary in the company?
+-- MAX(salary) - What is the highest salary in the company?
+
+-- STEP 6: Date Functions
+-- NOW() - What is the current date and time?
+-- CURDATE() - What is today’s date?
+
+-- STEP 7: String Functions
+-- CONCAT - How can we combine name and department into a single readable text?
+--IFNULL - How can we replace NULL phone values with a default message?
+
+
+-- STEP 8: GROUP BY
+-- COUNT per department - How many employees are there in each department?
+
+-- AVG per department - What is the average salary in each department?
+
+-- SUM per department - What is the total salary paid in each department?
+
+-- STEP 9: HAVING
+-- Which departments have more than 1 employee?
+
+-- STEP 10: WHERE vs HAVING
+-- WHERE
+-- What is the average salary per department after removing employees with salary ≤ 30000?
+
+-- HAVING
+-- Which departments have an average salary greater than 40000?
+
+-- STEP 11: Final Combined Query
+-- Which departments (with salary > 30000 employees) have an average salary above 40000?
+
+-- STEP 12: NULL Count Example
+-- How many employees do not have a phone number?
+
+-- STEP 13: Trick Question (Very Important)
+SELECT department, salary 
+FROM employees 
+GROUP BY department;
+
+
+
