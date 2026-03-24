@@ -1,0 +1,67 @@
+Module 7 - JOINS & Aliases (HIGHLY IMPORTANT)	
+
+INNER JOIN
+LEFT JOIN
+RIGHT JOIN
+SELF JOIN
+Table Aliases
+Column Aliases
+Use Cases
+- User order history
+- Product-category mapping
+
+-----------------------------------------------------------
+
+STEP 1 – Setup Database
+“How do we create and switch to a database for our lab?”
+
+STEP 2 – Drop Tables
+“Why do we drop existing tables before creating new ones?”
+
+STEP 3 – Create Tables
+“How do we design tables that can be related to each other?”
+
+STEP 4 – Insert Sample Data
+“Why do we need sample data before learning JOINs?”
+
+STEP 5 – INNER JOIN
+“How do we fetch only matching records from two tables?”
+
+STEP 6 – LEFT JOIN
+“How can we show all users even if they don’t have orders?”
+
+STEP 7 – RIGHT JOIN
+“How do we ensure all records from the right table are included?”
+
+STEP 8 – SELF JOIN
+“How can a table be joined with itself to show relationships like manager and employee?”
+
+STEP 9 – Table Aliases
+“How can we make long table names shorter and queries cleaner?”
+
+STEP 10 – Column Aliases
+“How do we rename columns in the output for better readability?”
+
+STEP 11 – User Order History
+“Which JOIN helps us show all users along with their order history?”
+
+STEP 12 – Product-Category Mapping
+“How do we map products to their categories using JOIN?”
+
+STEP 13 – Common Mistake
+“What happens if we join tables without a condition?”
+
+PRACTICE TASK QUESTIONS
+Task 1 – Total Order Amount
+“How do we calculate total order amount for each user?”
+
+Task 2 – Users Without Orders
+“How can we find users who never placed any orders?”
+
+Task 3 – Count Orders
+“How do we count how many orders each user has?”
+
+Task 4 – Top Customer
+“How do we find the customer who spent the most?”
+		
+		
