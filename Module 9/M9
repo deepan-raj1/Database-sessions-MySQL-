@@ -1,0 +1,117 @@
+Module 9. Indexes & Performance Basics	
+What is an index?
+How indexes work
+When NOT to use indexes
+Single-column index
+Composite index
+Query performance basics
+
+________________________________________________________________-
+
+
+Step 1- Create Database index_lab
+Step 2: Create Table employees (id, name, department, salary, city, join_date)
+Step 3: Insert Sample Data / Bulk data generation
+INSERT INTO employees (name, department, salary, city, join_date) VALUES
+('John', 'IT', 60000, 'Chennai', '2022-01-10'),
+('Alice', 'HR', 50000, 'Mumbai', '2021-03-15'),
+('Bob', 'IT', 70000, 'Bangalore', '2020-07-20'),
+('David', 'Finance', 65000, 'Delhi', '2019-11-25'),
+('Emma', 'IT', 72000, 'Chennai', '2023-05-18'),
+('Sophia', 'HR', 48000, 'Chennai', '2022-09-12'),
+('Liam', 'Finance', 80000, 'Mumbai', '2021-12-01'),
+('Noah', 'IT', 75000, 'Bangalore', '2020-04-05');
+SELECT * FROM employees;
+
+Step  4: Run Query Without Index (Return an employees whose name is John)
+
+Step 5: Analyze Using EXPLAIN
+
+Step 6: Create Index on Name (single column index)
+
+Step 7: Run Same Query Again (Return an employees whose name is John)
+
+Step 8: Check EXPLAIN Again
+
+Step 9: Create Composite Index on department, salary
+
+Step 10: Query Using Composite Index (employye who work in IT department and have 60,000 and above salary)
+
+Step 11: Analyze Query (Observe index usage)
+
+Step 12: Leftmost Prefix Rule Works (Correct Usage)
+
+Step 13: Does NOT Use Index Properly
+
+Step 14: Function on Column (When Index Fails) - Employees who joined on year 2022
+
+Step 15: Optimized Query by using BETWEEN
+
+Step 16: Insert Data After Index (Insert Performance Impact)
+INSERT INTO employees (name, department, salary, city, join_date)
+VALUES ('TestUser', 'IT', 55000, 'Chennai', '2023-01-01');
+-- Slightly slower due to index updates
+
+
+Step 17 – Dropping Index (drop idx_name on employees)
+
+Step 18: Verify Again (find employee John)
+
+
+-- Challenge Tasks (Important)
+-- Challenge 1: Create index on city, Run query:
+
+-- Challenge 2:
+-- Create composite index (city, department)
+
+
+-- Challenge 3 (Optimization Task):
+-- Slow Query:
+-- SELECT * FROM employees WHERE salary + 1000 > 60000;
+
+
+Step 19: Show All Indexes
+
+Step 20: Measure Query Time (Optional)
+-- SET profiling = 1;
+-- SELECT * FROM employees WHERE name = 'John';
+-- SHOW PROFILES;
+
+__________________________________________________________________
+-- Other Examples
+
+Step 21 – Insert Bulk Data (IMPORTANT)
+INSERT INTO employees (name, department, salary, city, join_date)
+SELECT 
+
+
+Step 22 – Covering Index (Create idx_cover on name, salary) and Explain for specific name.
+
+
+Step 23 – LIKE Optimization (Explain for specifical employee name Aarush)
+EXPLAIN SELECT * FROM employees WHERE name LIKE '%Aarush';
+
+
+Step 24 – Expression Issue
+EXPLAIN SELECT * FROM employees WHERE salary + 1000 > 60000;
+
+
+Step 25 – Index Impact on ORDER BY
+EXPLAIN 
+SELECT * FROM employees 
+WHERE department = 'IT'
+ORDER BY salary;
+
+
+Step 26 – Show Indexes
+SHOW INDEX FROM employees;
+
+
+Step 27 – Modern Performance Analysis (EXPLAIN ANALYZE - employees from IT department)
+
+Step 28 – Drop Index
+DROP INDEX idx_name ON employees;
+EXPLAIN SELECT * FROM employees WHERE name = 'Emp100';
+
+________________________________________________________________________
+
